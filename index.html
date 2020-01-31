@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        *,
+        body {
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+
+
+        .pg {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(to bottom, #0E213D, #30496E);
+        }
+
+        h1 {
+            margin: auto;
+            font-size: 52px;
+            font-weight: 100;
+            font-family: 'Roboto';
+            color: white;
+            text-align: center;
+            margin-bottom: 0px;
+            margin-left: 20%;
+            margin-right: 20%;
+            text-transform: uppercase;
+        }
+
+        #logo {
+            width: 40%;
+            margin: auto;
+            opacity: 0.6;
+            margin-top: 20px;
+        }
+
+        .inp {
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid red;
+            padding-bottom: 5px;
+            color: white;
+            font-size: 18px;
+            font-weight: 300;
+            font-family: 'Roboto';
+        }
+
+        ::placeholder {
+            color: rgba(255, 255, 255, 0.753);
+            font-size: 18px;
+            font-weight: 300;
+            font-family: 'Roboto';
+        }
+
+        #form {
+            margin-top: 20vh;
+            width: 50%;
+            margin-left: 10%;
+            width: 60%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="pg row">
+        <div id="clogo" class="col-6 row">
+            <h1>Programa de diploma</h1>
+            <img id="logo" src="src/img/logo.png" alt="">
+        </div>
+        <div id="formu" class="col-6 container">
+            <form id="form">
+                <div class="form-group">
+                    <input class="inp" placeholder="USUARIO" type="number" required>
+                </div>
+                <div class="form-group">
+                    <input class="inp" placeholder="CONTRASEÑA" type="password" required>
+                </div>
+                <a type="" style="color: #0E213D;" class="btn btn-raised bg-white"
+                    href="inscripcion.html">INGRESAR
+                </a>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+        crossorigin="anonymous"></script>
+    <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+</body>
+
+</html>
