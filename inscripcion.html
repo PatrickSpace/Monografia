@@ -31,14 +31,20 @@
         const store = new Vuex.Store({
             state: {
                 profesor: {},
-                materia: {},
+                materia: '',
+            
             },
             mutations:{
-                seleccionar(state,profe, materia1)
+                selectm(state,m)
                 {
-                    state.profesor = profe;
-                    state.materia = materia1;
+                    
+                    state.materia = m;
                 },
+                selectp(state,p)
+                {
+    
+                    state.profesor = p;
+                }
             },
         });
         

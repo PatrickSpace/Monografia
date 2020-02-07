@@ -1,14 +1,14 @@
 Vue.component(('cursos'), {
-    template:
-        `
+    template:  /*template*/
+    `
     <div class="container">
         <div style="margin-top: 3vh; width: 100%;">
             <h2 class="text-white">{{titulo}}</h2>
         </div>
         <div class="cursos">
-            <div  v-for="(m, i) in materias"  class="curso">
-                <h5 class="materia-name" >{{m.nombre}}</h5>
-                <small @click="seleccionar(p,m)" data-toggle="modal" data-target="#staticBackdrop" class="profe" v-for="(p,i) in m.profes" >{{p.nombre}} ( {{p.alumnos}} )</small>
+            <div  v-for="(mat, i) in materias"  class="curso">
+                <h5 >{{mat.nombre}}</h5>
+                <small data-toggle="modal" data-target="#staticBackdrop" class="profe" v-for="(profe) in mat.profes" @click="selectm(mat);selectp(profe)" >  {{profe.nombre}} ( {{profe.alumnos}} )</small>
             </div>
         </div>
     </div>
@@ -107,7 +107,8 @@ Vue.component(('cursos'), {
     },
     methods:
     {
-        ...Vuex.mapMutations(['seleccionar']),
-    },
+        ...Vuex.mapMutations(['selectm','selectp']),
+        
+    }
 
 });

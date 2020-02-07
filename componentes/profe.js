@@ -1,21 +1,22 @@
-
-
 Vue.component(('profe'), {
-    template:
-     `
+    template: /*template*/
+        `
     <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel"> Inscribirse en {{ materia.nombre }}</h5>
+                <h5 class="modal-title" id="staticBackdropLabel"> Inscribirse en  <strong>{{ materia.nombre }}  </strong> </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <h4>{{profesor.nombre}}</h4>
-                <h3>{{materia.nombre}}</h3>
+                <h4> Con el profesor: <strong>
+                {{profesor.nombre}}
+                </strong>
+                </h4>
+                
                 <div class="form-group">
                 <label for="tema" class="bmd-label-floating">Tema</label>
                 <input type="text" class="form-control" id="tema">
@@ -37,7 +38,7 @@ Vue.component(('profe'), {
     `,
     computed:
     {
-        ...Vuex.mapState(['profesor','materia']),
+        ...Vuex.mapState(['profesor', 'materia', 'numero']),
     }
 
 
